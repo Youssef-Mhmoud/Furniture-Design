@@ -23,7 +23,7 @@
     <!-- Start Navbar  -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Furniture Design</a>
+        <a class="navbar-brand text-uppercase" href="#">Furniture Design</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,19 +43,19 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link p-lg-3" href="#">Services</a>
+              <a class="nav-link p-lg-3" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-lg-3" href="#">Portfolio</a>
+              <a class="nav-link p-lg-3" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-lg-3" href="#">About</a>
+              <a class="nav-link p-lg-3" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-lg-3" href="#">Pricing</a>
+              <a class="nav-link p-lg-3" href="#pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-lg-3" href="#">Contact</a>
+              <a class="nav-link p-lg-3" href="#contact">Contact</a>
             </li>
           </ul>
           <div class="search ps-3 pe-3 d-none d-lg-block">
@@ -65,18 +65,74 @@
       </div>
     </nav>
     <!-- End Navbar  -->
-    <div class="landing d-flex align-items-center">
-      <video muted loop autoplay>
+    <!-- Start Landing  -->
+    <div class="landing d-flex align-items-center justify-content-center">
+      <video muted loop autoplay class="position-absolute top-0 left-0">
         <source src="/video.mp4" type="video/mp4" />
       </video>
       <div class="container">
-        <div class="text-center text-light position-absolute">
-          <h1>Welcome In Furniture Design</h1>
-          <p class="fs-6 text-white-50 mb-4">We make awesome furniture and many things you need</p>
-          <a class="btn rounded-pill main-btn text-uppercase" href="#">Started</a>
+        <div class="text-center text-light">
+          <h1 class="fs-2">
+            Welcome In <span class="text-uppercase">Furniture Design</span>
+          </h1>
+          <p class="fs-6 text-white-50 mb-4">
+            We make awesome furniture and many things you need
+          </p>
+          <a
+            class="btn rounded-pill main-btn text-uppercase text-light"
+            href="#"
+            >Started</a
+          >
         </div>
       </div>
     </div>
+    <!-- End Landing  -->
+    <!-- Start Services  -->
+    <div class="services" id="services">
+      <div class="container text-center pt-5 pb-5">
+        <div class="main-title mt-5 mb-5 position-relative">
+          <h2>We Have</h2>
+          <p class="text-uppercase text-black-50">Many Services like</p>
+        </div>
+        <div class="row pt-5 pb-5">
+          <div class="col-lg-4 col-md-6">
+            <i class="fa-solid fa-couch fa-5x mb-3"></i>
+            <h4 class="text-uppercase">awesome design</h4>
+            <p class="lh-lg text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
+              explicabo repudiandae, sapiente soluta laudantium sed itaque modi
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <i class="fa-solid fa-chair fa-5x mb-3"></i>
+            <h4 class="text-uppercase">easy to use</h4>
+            <p class="lh-lg text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
+              explicabo repudiandae, sapiente soluta laudantium sed itaque modi
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <i class="fa-solid fa-bed fa-5x mb-3"></i>
+            <h4 class="text-uppercase">Comfort Furniture</h4>
+            <p class="lh-lg text-black-50">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
+              explicabo repudiandae, sapiente soluta laudantium sed itaque modi
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services  -->
+    <!-- Start Portfolio  -->
+    <div class="portfolio">
+      <div class="container text-center pt-5 pb-5">
+        <div class="main-title mt-5 mb-5 position-relative">
+          <h2>We Make</h2>
+          <p class="text-uppercase">a beautiful furniture like</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Portfolio  -->
     <!-- Bootstrap Js File  -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome Library JS File  -->
