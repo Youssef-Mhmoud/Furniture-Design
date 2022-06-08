@@ -159,8 +159,9 @@ body {
 .features .box-img-feat {
   padding: 5px;
   overflow: hidden;
-  opacity: 0;
+  transform: scale(0);
   transition: 1s;
+  transition-delay: calc(0.5s * var(--i));
 }
 .features .box-img-feat img {
   width: 500px !important;

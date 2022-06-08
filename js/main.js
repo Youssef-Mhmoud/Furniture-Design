@@ -13,13 +13,19 @@ window.addEventListener("scroll", (eo) => {
 // 2-Features Animation
 let mainTitleFeat = document.querySelector(".features .main-title");
 let imgOpacity = document.querySelectorAll('.features .box-img-feat')
-console.log(imgOpacity);
 window.addEventListener("scroll", (eo) => {
   if (window.scrollY >= 900) {
     mainTitleFeat.classList.add('animation-title')
     imgOpacity.forEach(item => {
-      item.style.opacity = '1'
+      item.style.transform = 'scale(1)'
     });
   }
 })
+// 3- About Animation
+let mainTitleAbout = document.querySelector('.about .main-title')
+window.onscroll = eo => {
+  if (window.scrollY >= 1400) {
+    mainTitleAbout.classList.add('animation-title')
+  }
+}
 //------------------------------------------------------------
