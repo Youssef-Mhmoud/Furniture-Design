@@ -29,3 +29,29 @@ window.onscroll = eo => {
   }
 }
 //------------------------------------------------------------
+// Start Feautures Section
+let featuresList = document.querySelectorAll('.features ul li')
+let featImgBox = document.querySelectorAll('.big-img-box')
+
+featuresList.forEach(ele => {
+  ele.addEventListener('click', (eo) => {
+    // To Add And Remove Active Class 
+    eo.target.parentElement.querySelectorAll('.active').forEach(item => {
+      item.classList.remove('active')
+    })
+    ele.classList.add('active')
+    // Images 
+    featImgBox.forEach(img => {
+      img.style.transform = "scale(0)"
+      img.style.opacity = '0'
+      img.style.flex = "0 0 0"
+    })
+    document.querySelectorAll(ele.dataset.work).forEach(i => {
+      i.style.transition = "1s linear"
+      i.style.transform = "scale(1)"
+      i.style.opacity = '1'
+      i.style.flex = "0 0 25%"
+
+    })
+  })
+});
