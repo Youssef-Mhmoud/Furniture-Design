@@ -31,15 +31,20 @@ window.addEventListener("scroll", (eo) => {
 })
 // 3- About Animation
 let mainTitleAbout = document.querySelector('.about .main-title')
+let cards = document.querySelectorAll('.about .cards')
 window.onscroll = eo => {
   let windowheight = window.innerHeight;
   let revealTop = mainTitleAbout.getBoundingClientRect().top;
-  let revealPoint = 150;
+  let revealPoint = 550;
 
   if (revealTop < (windowheight - revealPoint)) {
     mainTitleAbout.classList.add('animation-title')
+    cards.forEach(item => {
+      item.classList.add('fade-about')
+    });
   }
 }
+
 //------------------------------------------------------------
 /* Start Feautures Section */
 let featuresList = document.querySelectorAll('.features ul li')
