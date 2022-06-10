@@ -44,7 +44,17 @@ window.onscroll = eo => {
     });
   }
 }
+// 4- Pricing Animation
+let mainTitlePricing = document.querySelector('.pricing .main-title')
+window.addEventListener("scroll", (eo) => {
+  let windowheight = window.innerHeight;
+  let revealTop = mainTitlePricing.getBoundingClientRect().top;
+  let revealPoint = 150;
 
+  if (revealTop < (windowheight - revealPoint)) {
+    mainTitlePricing.classList.add('animation-title')
+  }
+})
 //------------------------------------------------------------
 /* Start Feautures Section */
 let featuresList = document.querySelectorAll('.features ul li')
