@@ -1,9 +1,13 @@
-// Start Animation 
+/* Start Animation */
 // 1-Services Animation
 let mainTitleServ = document.querySelector(".services .main-title");
 let fadeServ = document.querySelector('.fade-serv')
 window.addEventListener("scroll", (eo) => {
-  if (window.scrollY >= 510) {
+  let windowheight = window.innerHeight;
+  let revealTop = mainTitleServ.getBoundingClientRect().top;
+  let revealPoint = 150;
+
+  if (revealTop < (windowheight - revealPoint)) {
     mainTitleServ.classList.add('animation-title')
     fadeServ.style.top = "0"
     fadeServ.style.opacity = "1"
@@ -14,7 +18,11 @@ window.addEventListener("scroll", (eo) => {
 let mainTitleFeat = document.querySelector(".features .main-title");
 let imgOpacity = document.querySelectorAll('.features .box-img-feat')
 window.addEventListener("scroll", (eo) => {
-  if (window.scrollY >= 900) {
+  let windowheight = window.innerHeight;
+  let revealTop = mainTitleFeat.getBoundingClientRect().top;
+  let revealPoint = 150;
+
+  if (revealTop < (windowheight - revealPoint)) {
     mainTitleFeat.classList.add('animation-title')
     imgOpacity.forEach(item => {
       item.style.transform = 'scale(1)'
@@ -24,34 +32,48 @@ window.addEventListener("scroll", (eo) => {
 // 3- About Animation
 let mainTitleAbout = document.querySelector('.about .main-title')
 window.onscroll = eo => {
-  if (window.scrollY >= 1400) {
+  let windowheight = window.innerHeight;
+  let revealTop = mainTitleAbout.getBoundingClientRect().top;
+  let revealPoint = 150;
+
+  if (revealTop < (windowheight - revealPoint)) {
     mainTitleAbout.classList.add('animation-title')
   }
 }
 //------------------------------------------------------------
-// Start Feautures Section
+/* Start Feautures Section */
 let featuresList = document.querySelectorAll('.features ul li')
 let featImgBox = document.querySelectorAll('.big-img-box')
 
 featuresList.forEach(ele => {
   ele.addEventListener('click', (eo) => {
-    // To Add And Remove Active Class 
+    // Add And Remove Active Class 
     eo.target.parentElement.querySelectorAll('.active').forEach(item => {
       item.classList.remove('active')
     })
     ele.classList.add('active')
-    // Images 
+    // Images
     featImgBox.forEach(img => {
-      img.style.transform = "scale(0)"
-      img.style.opacity = '0'
-      img.style.flex = "0 0 0"
+      img.style.display = "none"
+      // if (window.innerWidth > 991) {
+      //   img.style.transform = "scale(0)"
+      //   img.style.opacity = '0'
+      //   img.style.flex = "0 0 0"
+      // } else {
+      // }
     })
     document.querySelectorAll(ele.dataset.work).forEach(i => {
-      i.style.transition = "1s linear"
-      i.style.transform = "scale(1)"
-      i.style.opacity = '1'
-      i.style.flex = "0 0 25%"
-
+      i.style.display = "block"
+      // if (window.innerWidth > 991) {
+      //   i.style.transition = ".3s linear"
+      //   i.style.transform = "scale(1)"
+      //   i.style.opacity = '1'
+      //   i.style.flex = "0 1 25%"
+      // } else {
+      //   i.style.flex = '0 1 auto'
+      // }
     })
   })
 });
+
+//------------------------------------------------------------
