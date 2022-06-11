@@ -1,16 +1,18 @@
 /* Start Animation */
 // 1-Services Animation
 let mainTitleServ = document.querySelector(".services .main-title");
-let fadeServ = document.querySelector('.fade-serv')
+let fadeServ = document.querySelectorAll('.fade-serv')
 window.addEventListener("scroll", (eo) => {
   let windowheight = window.innerHeight;
   let revealTop = mainTitleServ.getBoundingClientRect().top;
-  let revealPoint = 150;
+  let revealPoint = 350;
 
   if (revealTop < (windowheight - revealPoint)) {
     mainTitleServ.classList.add('animation-title')
-    fadeServ.style.top = "0"
-    fadeServ.style.opacity = "1"
+    fadeServ.forEach(item => {
+      item.style.opacity = '1'
+      item.style.top = '-40px'
+    })
   }
   // console.log(window.scrollY);
 });
@@ -44,15 +46,15 @@ window.onscroll = eo => {
     });
   }
 }
-// 4- Pricing Animation
-let mainTitlePricing = document.querySelector('.pricing .main-title')
+// 4- Our Customer Animation
+let mainTitleCustomer = document.querySelector('.main-title-customer')
 window.addEventListener("scroll", (eo) => {
   let windowheight = window.innerHeight;
-  let revealTop = mainTitlePricing.getBoundingClientRect().top;
+  let revealTop = mainTitleCustomer.getBoundingClientRect().top;
   let revealPoint = 150;
 
   if (revealTop < (windowheight - revealPoint)) {
-    mainTitlePricing.classList.add('animation-title')
+    mainTitleCustomer.classList.add('animation-title')
   }
 })
 //------------------------------------------------------------
