@@ -22,7 +22,7 @@ let imgOpacity = document.querySelectorAll('.features .box-img-feat')
 window.addEventListener("scroll", (eo) => {
   let windowheight = window.innerHeight;
   let revealTop = mainTitleFeat.getBoundingClientRect().top;
-  let revealPoint = 150;
+  let revealPoint = 450;
 
   if (revealTop < (windowheight - revealPoint)) {
     mainTitleFeat.classList.add('animation-title')
@@ -55,6 +55,17 @@ window.addEventListener("scroll", (eo) => {
 
   if (revealTop < (windowheight - revealPoint)) {
     mainTitleCustomer.classList.add('animation-title')
+  }
+})
+// 5- Contact Us Animation
+let mainTitleContact = document.querySelector('#contact .main-title')
+window.addEventListener("scroll", (eo) => {
+  let windowheight = window.innerHeight;
+  let revealTop = mainTitleContact.getBoundingClientRect().top;
+  let revealPoint = 150;
+
+  if (revealTop < (windowheight - revealPoint)) {
+    mainTitleContact.classList.add('animation-title')
   }
 })
 //------------------------------------------------------------
