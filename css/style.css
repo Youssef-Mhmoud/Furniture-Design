@@ -415,22 +415,26 @@ body {
   max-width: 550px;
   margin-bottom: 40px !important;
 }
+.contact form {
+  max-width: 800px;
+  margin: auto;
+}
 .contact form *:focus,
 .contact form * {
   box-shadow: none;
   border: none;
   caret-color: var(--dark-color);
-  text-align: center !important;
+  width: 100%;
 }
 .contact form textarea {
   resize: none;
-  height: 200px;
+  height: 150px;
+  margin-bottom: 15px;
 }
 .contact form button {
   border: 2px solid var(--dark-color);
   color: var(--dark-color);
-  padding: 10px;
-  width: 100%; 
+  padding: 10px 30px;
 }
 .contact form button:hover {
   background-color: var(--dark-color);
