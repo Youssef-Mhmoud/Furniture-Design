@@ -441,3 +441,48 @@ body {
   color: white;
 }
 /* End Contact Us  */
+/* Start Footer  */
+footer {
+  background-color: var(--dark-color);
+}
+footer .logo-foot {
+  color: var(--calm-color);
+}
+footer .below-logo {
+  max-width: 300px;
+}
+footer h4 {
+  color: var(--calm-color);
+  margin-bottom: 30px;
+}
+footer .links-li li {
+  padding: 2px 0;
+  transition: .3s;
+  cursor: pointer;
+}
+footer .links-li li::before {
+  content: '\f101';
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  margin-right: 8px;
+}
+footer .links-li li:hover {
+  padding: 2px 10px;
+  color: white !important;
+}
+footer .social-icons li {
+  font-size: 40px;
+  margin: 30px;
+  cursor: pointer;
+  transition: .3s;
+}
+footer .social-icons li:hover:nth-child(1) {
+  color: #1877f2;
+}
+footer .social-icons li:hover:nth-child(2) {
+  color: #1da1f2;
+}
+footer .social-icons li:hover:nth-child(3) {
+  color: #0a66c2;
+}
+/* End Footer  */
