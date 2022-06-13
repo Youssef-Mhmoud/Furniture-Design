@@ -1,14 +1,4 @@
 /* Start Animation */
-// Function Manage Animation
-function manageAnimation(name1,num) {
-  let windowheight = window.innerHeight;
-  let revealTop = name1.getBoundingClientRect().top;
-  let revealPoint = num;
-
-  if (revealTop < (windowheight - revealPoint)) {
-    name1.classList.add('animation-title')
-  }
-}
 // Function Manage If Condition
 function manageIf(name, number) {
   let windowheight = window.innerHeight;
@@ -16,6 +6,12 @@ function manageIf(name, number) {
   let revealPoint = number;
 
   return revealTop < (windowheight - revealPoint)
+}
+// Function Manage Animation
+function manageAnimation(name1,num) {
+  if (manageIf(name1, num)) {
+    name1.classList.add('animation-title')
+  }
 }
 // 1-Services Animation
 let mainTitleServ = document.querySelector(".services .main-title");
@@ -45,6 +41,7 @@ window.addEventListener("scroll", (eo) => {
 // 3- About Animation
 let mainTitleAbout = document.querySelector('.about .main-title')
 let cards = document.querySelectorAll('.about .cards')
+
 window.onscroll = eo => {
   if (manageIf(mainTitleAbout, 550)) {
     mainTitleAbout.classList.add('animation-title')
@@ -56,12 +53,12 @@ window.onscroll = eo => {
 // 4- Our Customer Animation
 let mainTitleCustomer = document.querySelector('.main-title-customer')
 window.addEventListener("scroll", (eo) => {
-  manageAnimation(mainTitleCustomer, 150)
+  manageAnimation(mainTitleCustomer, 450)
 })
 // 5- Contact Us Animation
 let mainTitleContact = document.querySelector('#contact .main-title')
 window.addEventListener("scroll", (eo) => {
-  manageAnimation(mainTitleContact, 150)
+  manageAnimation(mainTitleContact, 450)
 })
 //------------------------------------------------------------
 /* Start Feautures Section */
