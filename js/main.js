@@ -1,30 +1,41 @@
 /* Start Animation */
+// Function Manage Animation
+function manageAnimation(name1,num) {
+  let windowheight = window.innerHeight;
+  let revealTop = name1.getBoundingClientRect().top;
+  let revealPoint = num;
+
+  if (revealTop < (windowheight - revealPoint)) {
+    name1.classList.add('animation-title')
+  }
+}
+// Function Manage If Condition
+function manageIf(name, number) {
+  let windowheight = window.innerHeight;
+  let revealTop = name.getBoundingClientRect().top;
+  let revealPoint = number;
+
+  return revealTop < (windowheight - revealPoint)
+}
 // 1-Services Animation
 let mainTitleServ = document.querySelector(".services .main-title");
 let fadeServ = document.querySelectorAll('.fade-serv')
-window.addEventListener("scroll", (eo) => {
-  let windowheight = window.innerHeight;
-  let revealTop = mainTitleServ.getBoundingClientRect().top;
-  let revealPoint = 350;
 
-  if (revealTop < (windowheight - revealPoint)) {
+window.addEventListener("scroll", (eo) => {
+  if (manageIf(mainTitleServ, 350)) {
     mainTitleServ.classList.add('animation-title')
     fadeServ.forEach(item => {
       item.style.opacity = '1'
       item.style.top = '-40px'
     })
   }
-  // console.log(window.scrollY);
 });
 // 2-Features Animation
 let mainTitleFeat = document.querySelector(".features .main-title");
 let imgOpacity = document.querySelectorAll('.features .box-img-feat')
-window.addEventListener("scroll", (eo) => {
-  let windowheight = window.innerHeight;
-  let revealTop = mainTitleFeat.getBoundingClientRect().top;
-  let revealPoint = 450;
 
-  if (revealTop < (windowheight - revealPoint)) {
+window.addEventListener("scroll", (eo) => {
+  if (manageIf(mainTitleFeat, 450)) {
     mainTitleFeat.classList.add('animation-title')
     imgOpacity.forEach(item => {
       item.style.transform = 'scale(1)'
@@ -35,11 +46,7 @@ window.addEventListener("scroll", (eo) => {
 let mainTitleAbout = document.querySelector('.about .main-title')
 let cards = document.querySelectorAll('.about .cards')
 window.onscroll = eo => {
-  let windowheight = window.innerHeight;
-  let revealTop = mainTitleAbout.getBoundingClientRect().top;
-  let revealPoint = 550;
-
-  if (revealTop < (windowheight - revealPoint)) {
+  if (manageIf(mainTitleAbout, 550)) {
     mainTitleAbout.classList.add('animation-title')
     cards.forEach(item => {
       item.classList.add('fade-about')
@@ -49,24 +56,12 @@ window.onscroll = eo => {
 // 4- Our Customer Animation
 let mainTitleCustomer = document.querySelector('.main-title-customer')
 window.addEventListener("scroll", (eo) => {
-  let windowheight = window.innerHeight;
-  let revealTop = mainTitleCustomer.getBoundingClientRect().top;
-  let revealPoint = 150;
-
-  if (revealTop < (windowheight - revealPoint)) {
-    mainTitleCustomer.classList.add('animation-title')
-  }
+  manageAnimation(mainTitleCustomer, 150)
 })
 // 5- Contact Us Animation
 let mainTitleContact = document.querySelector('#contact .main-title')
 window.addEventListener("scroll", (eo) => {
-  let windowheight = window.innerHeight;
-  let revealTop = mainTitleContact.getBoundingClientRect().top;
-  let revealPoint = 150;
-
-  if (revealTop < (windowheight - revealPoint)) {
-    mainTitleContact.classList.add('animation-title')
-  }
+  manageAnimation(mainTitleContact, 150)
 })
 //------------------------------------------------------------
 /* Start Feautures Section */
@@ -103,5 +98,4 @@ featuresList.forEach(ele => {
     })
   })
 });
-
 //------------------------------------------------------------
