@@ -4,6 +4,20 @@
   --btn-color: #865439;
   --calm-color: #d7b19d;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e1003;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--btn-color);
+}
 /* End Variables */
 ::selection {
   background-color: var(--btn-color);
