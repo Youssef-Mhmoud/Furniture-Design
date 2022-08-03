@@ -1,3 +1,3 @@
 # Furniture-Design
-## Lading Page
+## Landing Page
 ### Html-Css-Javascript-Bootstrap
