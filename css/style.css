@@ -228,48 +228,48 @@ body {
 /* End Features */
 /* Start About  */
 .about {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left,
     rgb(26, 20, 20) 49%,
     var(--dark-color) 51%
-  );
+  ); */
+  /* background-color: var(--calm-color); */
 }
+.about .main-title h2 {
+  color: var(--dark-color);
+}
+
 .about .discription {
   max-width: 500px;
+
 }
 .about .box-card .cards {
-  background-color: var(--dark-color);
+  /* background-color: var(--btn-color); */
   margin: 30px;
   width: 300px;
-  height: 400px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 7%);
   transition: 0.8s;
   border-radius: 3px;
   transition-delay: calc(0.6s * var(--about-delay));
 }
-.about .box-card .cards::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  border-radius: 3px 0 0 3px;
-  width: 50%;
-  background-color: #63585523;
-  pointer-events: none;
-}
+
 .about .box-card .cards .content svg {
   background-color: var(--calm-color);
   position: relative;
   z-index: 3;
-  height: 35px;
-  width: 35px;
+  height: 20px;
+  width: 20px;
 }
-.about .box-card .cards .content h2,
-.about .box-card .cards .content p {
+.about .box-card .cards .content h3,
+.about .box-card .cards .content p,
+.about .box-card .cards .content h5 {
   color: var(--calm-color);
   position: relative;
   z-index: 3;
+}
+.about .box-card .cards .content p {
+  font-size: 13px;
 }
 .about .box-card .cards span {
   transition: 0.5s;
