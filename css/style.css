@@ -232,7 +232,7 @@ body {
     to left,
     rgb(26, 20, 20) 49%,
     var(--dark-color) 51%
-  ); */
+  );  */
   /* background-color: var(--calm-color); */
 }
 .about .main-title h2 {
@@ -241,17 +241,18 @@ body {
 
 .about .discription {
   max-width: 500px;
-
 }
 .about .box-card .cards {
   /* background-color: var(--btn-color); */
+  border: 1px solid var(--calm-color);
+
   margin: 30px;
   width: 300px;
   height: 300px;
   box-shadow: 0 5px 20px rgb(0 0 0 / 7%);
   transition: 0.8s;
   border-radius: 3px;
-  transition-delay: calc(0.6s * var(--about-delay));
+  /* transition-delay: calc(0.6s * var(--about-delay)); */
 }
 
 .about .box-card .cards .content svg {
@@ -488,14 +489,14 @@ body {
   border-bottom-right-radius: 0px;
   color: var(--dark-color);
   padding: 10px 30px;
-  transition: .3s;
+  transition: 0.3s;
 }
 .contact form button:hover {
   background-color: var(--dark-color);
   color: white;
   box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.3);
-  border-top-left-radius: .25rem;
-  border-bottom-right-radius: .25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 /* End Contact Us  */
 /* Start Footer  */
