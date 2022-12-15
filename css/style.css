@@ -534,7 +534,11 @@ footer .social-icons li {
   cursor: pointer;
   transition: 0.3s;
 }
-footer .social-icons li:hover:nth-child(1) {
+
+footer .social-icons li:hover {
+  color: var(--calm-color);
+}
+/* footer .social-icons li:hover:nth-child(1) {
   color: #1877f2;
 }
 footer .social-icons li:hover:nth-child(2) {
@@ -542,5 +546,5 @@ footer .social-icons li:hover:nth-child(2) {
 }
 footer .social-icons li:hover:nth-child(3) {
   color: #0a66c2;
-}
+} */
 /* End Footer  */
