@@ -207,6 +207,7 @@ body {
   content: attr(data-img);
   position: absolute;
   background-color: #8654397a;
+  backdrop-filter: blur(4px);
   width: calc(100% - 10px);
   height: 0;
   display: flex;

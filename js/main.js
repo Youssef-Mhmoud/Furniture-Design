@@ -27,6 +27,28 @@ let mainTitleCustomer = document.querySelector(".main-title-customer");
 // 5- Contact Us Animation
 let mainTitleContact = document.querySelector("#contact .main-title");
 
+/////////////////////////////////////
+// const ladningSectionEl = document.querySelector(".landing");
+// const obs = new IntersectionObserver(
+//   function (entries) {
+//     const ent = entries[0];
+
+//     if (ent.isIntersecting === false) {
+//       mainTitleServ.classList.add("animation-title");
+//       fadeServ.forEach((item) => {
+//         item.style.opacity = "1";
+//         item.style.top = "-40px";
+//       });
+//     }
+//   },
+//   {
+//     root: null,
+//     threshold: 0,
+//     rootMargin: "-100px",
+//   }
+// );
+// obs.observe(ladningSectionEl);
+////////////////////////////////////
 window.addEventListener("scroll", (eo) => {
   // 1-Services Animation
   if (manageIf(mainTitleServ, 350)) {
@@ -44,15 +66,15 @@ window.addEventListener("scroll", (eo) => {
     });
   }
   // 3- About Animation
-  if (manageIf(mainTitleAbout, 550)) {
+  if (manageIf(mainTitleAbout, 500)) {
     mainTitleAbout.classList.add("animation-title");
     cards.forEach((item) => {
       item.classList.add("fade-about");
     });
   }
-// 4- Our Customer Animation
+  // 4- Our Customer Animation
   manageAnimation(mainTitleCustomer, 450);
-// 5- Contact Us Animation
+  // 5- Contact Us Animation
   manageAnimation(mainTitleContact, 450);
 });
 //------------------------------------------------------------
