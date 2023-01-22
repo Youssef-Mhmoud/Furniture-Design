@@ -113,3 +113,6 @@ featuresList.forEach((ele) => {
   });
 });
 //------------------------------------------------------------
+// Add year
+const year = new Date().getFullYear()
+document.querySelector('.footer-year').textContent = `Copyright© ${year}`
